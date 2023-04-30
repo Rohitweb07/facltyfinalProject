@@ -1,0 +1,31 @@
+<div class="formblock">
+
+
+<div class="formarea">
+
+        <form action="/users/create" method="post" id="form1">
+
+       <label for="name">Name</label><br>
+       <input type="text" name="name" id="name" placeholder="Name" required><br>
+       <label for="email">Email</label><br>
+       <input type="email" name="email" id="email" placeholder="Email" required>
+       <label for="password">Password</label><br>
+       <input type="password" name="password" id="password" placeholder="Password" required><br>
+       <label for="confirm_password">Confirm Password</label><br>
+       <input type="password" name="confirm_password" id="confirm_password"placeholder="Confirm Password" required><br>
+       <label for="role">Role</label>
+  <select name="role" id="role">
+    <option value="faculty">Faculty</option>
+    <option value="admin">Admin</option>
+  </select>
+
+       <input type="submit" value="Signup" class="signup-btn">
+       <h3>already Account? <a href="/users/sign-in" id="login-btn">Login</a></h3>
+
+        </form>
+        
+
+</div>
+
+
+</div>

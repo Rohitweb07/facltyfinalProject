@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="/css/home.css">
+<!-- <style>
+    .userprofilecontain
+    {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .userprofilecontain h3{
+        color: black;
+        margin-top: 70px;
+    }
+    .welcome
+    {
+        margin: auto;
+        
+    }
+    .welcome textarea{
+       
+        width: 70vw;
+        height:80vh;
+        margin-top: 10px;
+        color:black;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: large;
+    }
+    .postbutton {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+
+ 
+  
+  .postbutton:hover {
+    background-color: #cc5500;
+  }
+  
+ #postbutton
+ {
+    color: black;
+ }
+</style> -->
+<div class="userprofilecontain">
+    <div class="userprofile1">
+        <div class="userprofile3">
+            <%- include('detailsDashboard');%>
+        </div>
+        
+    </div>
+    <div class="welcome">
+      <!-- <div class="aboutfrom">
+    
+        <form action="/post/create" id="new-about-form" method="POST">
+
+        <textarea name="aboutme" id="aboutme" cols="300" rows="10"placeholder="About me..."required></textarea><br>
+         <input type="submit" value="Post"class="postbutton">
+            
+            
+        </form> -->
+        <h1 style="color:red"><%=user.email%></h1>
+        <div class="cardcontainer">
+        <%for(faculty of faculty){%>
+            
+          <%if(faculty.email==user.email){%>
+            
+            <div class="card" style="width:70%">
+                <div class="picture">
+                  <img src="images/unitedlogo.png" alt="Profile Picture">
+                </div>
+                <div class="details">
+                  <h2 class=detailsheading><%=faculty.name%></h2>
+                  
+                  <li><p><%=faculty.designation%></p></li>
+                  <p><%=faculty.qualification%></p>
+                  <p>Areas of Interest:<p> <%=faculty.areaOfInterest%></p></p>
+                  <p>Phone: <p> <%=faculty.phone%></p></p>
+                  <p>Email: <p> <%=faculty.email%></p></p>
+                
+                  <a href="#" class="button">View Profile</a>
+                  
+                      <%if(locals.user && locals.user.role==='admin')  {%>        
+                    <a href="/facultycard/destroy/<%= facultycard.id %>"class="button1">Delete faculty</a>
+                      <%}%>
+                  
+                </div>
+              </div>
+            
+            
+            <%}%>
+            
+        
+            <!-- <h1 style="color:red"><%=faculty.name%></h1> -->
+            
+           
+            
+            
+            
+        <%}%>
+    </div>
+    </div>
+          <h1 style="color:red"><%=user.designation%></h1>
+      </div>
+               
+    
+
+<!-- <div class="userProfile">
+</div> -->
+<!-- <div class="profileArea">
+<% if(locals.user){%>
+    
+    <p><%=user.name%></p>
+    <p><%=user.email%></p>
+   
+<%}%>
+<ul>
+    <% if (locals.user){ %>
+    <li>
+        <a href="/users/profile"><%=user.name %></a>
+    </li>
+    <li>
+        <a href="/users/sign-out">Sign Out</a>
+    </li>
+    <% }else{ %>
+    <li>
+        <a href="/users/sign-in">Sign In</a>
+    </li>
+    <li>
+        <a href="/users/sign-up">Sign Up</a>
+    </li>
+
+    <% } %>
+</ul>
+</div> -->

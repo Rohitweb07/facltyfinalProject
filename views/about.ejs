@@ -1,0 +1,28 @@
+<div class="aboutcontain">
+    <%- include('detailsDashboard');%>
+    
+    <div class="aboutdata">
+        <h3>
+    <ul>
+        <% for(post of post){%>
+            <li>
+
+                <%if(locals.user && locals.user.id==post.faculty.id){%>
+                    
+                    <a href="/post/destroy/<%= post.id %>">X</a>
+                    
+                    <%}%>
+               
+                <%= post.aboutme %>
+                <%= post.faculty?.name%>
+                 
+            </li>
+
+            
+       <% }%>
+    </ul>
+</h3>
+</div>
+   
+
+</div>

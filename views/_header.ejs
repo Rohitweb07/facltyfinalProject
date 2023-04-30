@@ -1,0 +1,50 @@
+
+<header>
+    <section class="section1">
+     <div class="block1">
+         
+             <navbar class="navbar">
+                 <img src="\images\unitedlogo.png" alt="unitedlogo" class="logoimg" hrf="#">
+                 <ul class="nav-menu">
+                    <li class="nav-item"><button type="button" class="nav-btn"><a href="https://united.ac.in/" class="nav-link">Home</a></button></li>
+                    <li class="nav-item"><button type="button" class="nav-btn"><a href="#"class="nav-link">Institute</a></button></li>
+                   <li class="nav-item"><button type="button" class="nav-btn"><a href="#"class="nav-link">Department</a></button></li>
+                   <li class="nav-item"><button type="button" class="nav-btn"><a href="#"class="nav-link">Academy</a></button></li>
+                   <li class="nav-item"><button type="button" class="nav-btn"><a href="#"class="nav-link">Facilities</a></button></li>
+                   <li class="nav-item"><button type="button" class="nav-btn"><a href="#"class="nav-link">Contact</a></button></li>
+                   <%if(locals.user){%>
+                   <li class="nav-item"><button type="button" class="nav-btn"><a href="/users/sign-In"class="nav-link">SignIn</a></button></li>
+                   <li class="nav-item"><button type="button" class="nav-btn"><a href="/users/sign-out"class="nav-link">SignOut</a></button></li>
+                   <% }else{ %>
+                    <li class="nav-item"><button type="button" class="nav-btn"><a href="/users/sign-In"class="nav-link">SignIn</a></button></li>
+                    <li class="nav-item"><button type="button" class="nav-btn"><a href="/users/sign-up"class="nav-link">SignUp</a></button></li>
+                    <% } %>
+
+                </ul>
+
+                <!-- <form action="#">
+                  <input type="text" placeholder="Search.." name="search" class="search_text">
+                  <button type="Search"class="nav-btn">Search</button>
+                </form> -->
+
+                <div class="hamburger">
+ 
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                
+                </div>
+      
+                </navbar>
+         </div>
+                 <div class="block2">
+               
+         </div>
+
+         
+     </div>
+
+                 
+    </section>
+ </header>
+ <script src="/js/_header.js"></script>

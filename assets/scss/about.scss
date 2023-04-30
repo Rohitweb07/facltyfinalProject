@@ -1,0 +1,12 @@
+.aboutcontain
+    {
+        display: flex;
+        flex-direction: row;
+        border-style: double;
+        h3{
+            display: flex;
+            flex-direction: column;
+            margin-top: 70px;
+        }
+    }
+   

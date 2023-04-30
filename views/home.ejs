@@ -1,0 +1,68 @@
+
+<section id="feedpost">
+    
+<!-- <form action="/post/create" id="new-post-form" method="POST">
+
+<textarea name="aboutme" id="aboutme" cols="30" rows="10"placeholder="about me..."required></textarea><br>
+<textarea name="responsbility" id="aboutme" cols="30" rows="10"placeholder="responsbility..."required></textarea><br>
+    
+<input type="submit" value="postaboutyou"id="postbutton">
+</form> -->
+
+<div class="cardcontainer">
+<%for(facultycard of facultycard){%>
+    
+<div class="card">
+    <div class="picture">
+      <img src="images/unitedlogo.png" alt="Profile Picture">
+    </div>
+    <div class="details">
+      <h2 class=detailsheading><%=facultycard.name%></h2>
+      
+      <li><p><%=facultycard.designation%></p></li>
+      <p><%=facultycard.qualification%></p>
+      <p>Areas of Interest:<p> <%=facultycard.areaOfInterest%></p></p>
+      <p>Phone: <p> <%=facultycard.phone%></p></p>
+      <p>Email: <p> <%=facultycard.email%></p></p>
+    
+      <a href="#" class="button">View Profile</a>
+      
+          <%if(locals.user && locals.user.role==='admin')  {%>        
+        <a href="/facultycard/destroy/<%= facultycard.id %>"class="button1">Delete faculty</a>
+          <%}%>
+      
+    </div>
+  </div>
+  <%}%>
+  
+</div>
+
+
+
+
+</section>
+<%if(locals.user && locals.user.role==="admin"){%>
+<ul>
+    <li>
+        <a href="/users/profile">view Profile</a>
+    </li>
+    <!-- <li>
+        <a href="/users/sign-out">Sign Out</a>
+    </li> -->
+    <li>
+        <a href="/facultycard/facultyform"class="button">Addfaculty</a>
+    </li>
+    
+    <% }else if(locals.user && locals.user.role==="faculty"){ %>
+    <li>
+        <a href="/users/profile">go to dashborad</a>
+        
+    </li>
+    <!-- <li>
+        <a href="/users/sign-up">Sign Up</a>
+    </li> -->
+
+    <% } %>
+</ul>
+
+
