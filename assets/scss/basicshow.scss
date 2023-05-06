@@ -1,0 +1,53 @@
+.basicinfodashbaord
+{
+  display: flex;
+  flex-wrap: wrap;
+  width:30%;
+}
+
+
+.basicInfoShow
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.basicInfo{
+   
+    padding-top: 100px;
+}
+
+.basicinfodata
+{
+ display: flex;
+ flex-wrap: wrap;
+ width: 97%;
+ margin:auto;
+ border-style:double;
+ border-color: black;
+ height:auto;
+ background-attachment: scroll;
+ color:black;
+
+}
+
+.basicinfodata li{
+    list-style:circle;
+    color:black;
+    font-weight: bold;
+}
+
+.basicinfodata h3
+{
+    color: brown;
+    font-weight: bold;
+}
+@media (max-width:768px){
+
+    .basicinfodata
+{
+ 
+ background-attachment: scroll;
+
+}
+}

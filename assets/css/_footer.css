@@ -17,7 +17,9 @@ li {
   margin: 20px; }
 
 li a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black;
+  font-weight: bold; }
 
 li a:hover {
   color: greenyellow; }

@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/basicshow.css">
+<div class="basicInfoShow">
+    <div class="basicinfodashboard">
+    <%- include('detailsDashboard');%>
+</div>
+<div class="basicInfo">
+    <div class="facultydetails">
+<!-- <img src="<%=useremail.avatar%>" alt="aaaa" srcset=""width="100"> -->
+    </div>
+   
+   <div class="basicinfodata">
+
+
+
+   <% for(userD of userD){%>
+          
+          <% if(userD.facultycard==currentemail){%>
+           
+            <ul>
+                <li><h3>Teaching</h3><hr><%=userD.teaching%></li>
+                <li><h3>Education</h3><hr><%=userD.education%></li>
+                <li><h3>Area Of Research</h3><hr><%=userD.areaofresearch%></li>
+                <li><h3>ProfessionalMemberships:</h3><hr><%=userD.professionalmembership%></li>
+                <li><h3>ResearchId:</h3><hr><%=userD.researchId%></li><hr>
+                
+               
+            
+            <%if(locals.user && locals.user.role==='faculty' && user.email==currentemail)  {%>        
+                <a href="/basicInfo/destroy/<%= userD.id %>"class="button1">Delete post</a>
+                <a href="#"class="button1">Edit post</a>
+                  
+                  <%}%>
+                  
+                  
+            </ul>
+            <%}%>
+            
+    <%}%>
+
+</div>
+
+</div>
+
+</div>

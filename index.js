@@ -7,7 +7,7 @@ const port=7992;
 const expressLayouts=require('express-ejs-layouts');
 const db=require('./config/mongoose');
 const sassMiddleware=require('node-sass-middleware');
-
+const path=require('path');
 //used for session cookies
 const session=require('express-session');
 const passport=require('passport');
@@ -33,6 +33,7 @@ app.use(cookiesParser());
 
 //use the assets
 app.use(express.static('./assets'));
+
 app.use(expressLayouts);
 //use express router
 
@@ -49,7 +50,7 @@ app.set('view engine','ejs');
 app.set('views','./views');
 
 //mongo store is used for store session cookies in the db
-
+app.use('/uploads',express.static(__dirname +'/uploads'));
 
 
 app.use(session({

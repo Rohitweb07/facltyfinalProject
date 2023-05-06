@@ -1,0 +1,70 @@
+<style>
+    .basicInfoarea
+    {
+        box-sizing: border-box;
+        padding-top: 90px;
+    }
+		form {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+		input[type=text], select {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			font-size: 16px;
+            color:black;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		label {
+			font-size: 16px;
+			color:black;
+			font-weight: bold;
+		}
+	</style>
+
+<div class="basicInfoPage">
+  <div class="basicInfoarea">
+	<form action="/basicInfo/create"method=POST>
+		<label for="teaching">Teaching:</label>
+		<input type="text" id="teaching" name="teaching" placeholder="Enter your teaching experience..">
+
+		<label for="education">Education:</label>
+		<input type="text" id="education" name="education" placeholder="Enter your education..">
+
+		<label for="areaofresearch">Area of Research:</label>
+		<input type="text" id="areaofresearch" name="areaofresearch" placeholder="Enter your area of research..">
+
+		<label for="professionalmembership">Professional Membership:</label>
+		<input type="text" id="professionalmembership" name="professionalmembership" placeholder="Enter your professional membership..">
+
+		<label for="researchId">Research ID:</label>
+		<input type="text" id="researchid" name="researchId" placeholder="Enter your research ID..">
+
+		<input type="submit" value="Submit">
+        <button type="button"><a href="">View</a></button>
+	</form>
+</div>
+</div>
+

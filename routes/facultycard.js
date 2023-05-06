@@ -4,7 +4,7 @@ const passport=require('passport');
 
 const facultycardController=require('../controllers/facultyCard_controller');
 
-router.get('/facultyform',facultycardController.facultyform);
+router.get('/facultyform',passport.checkAuthentication,facultycardController.facultyform);
 router.get('/cardfacultysign-In',facultycardController.cardfacultysignin);
 router.post('/create',facultycardController.create);
 router.get('/destroy/:id', passport.checkAuthentication, facultycardController.destory);

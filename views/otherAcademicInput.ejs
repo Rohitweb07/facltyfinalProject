@@ -1,0 +1,67 @@
+<style>
+    .basicInfoarea
+    {
+        box-sizing: border-box;
+        padding-top: 90px;
+    }
+		form {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+		input[type=text], select {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			font-size: 16px;
+            color:black;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		label {
+			font-size: 16px;
+			color:black;
+			font-weight: bold;
+		}
+	</style>
+
+<div class="basicInfoPage">
+  <div class="basicInfoarea">
+	<form action="/academicInfo/create"method=POST>
+		<label for="keynoteaddressinvitedtalksinconferencesworkshops"> KeynoteAddress/InvitedTalksinConferences&Workshops:</label>
+		<input type="text" id="present" name="keynoteaddressinvitedtalksinconferencesworkshops" placeholder="Enter your  keynoteaddressinvitedtalksinconferencesworkshops:.."required>
+        <label for="awardandhonors"> AwardandHonors:</label>
+		<input type="text" id="past" name="awardandhonors" placeholder="Enter your pastappointmentsheld..">
+		<label for="conferencesworkshopssymposiumshorttermcoursesorganized"> ConferencesWorkshopsSymposiumShorttermCoursesOrganized:</label>
+		<input type="text" id="present" name="conferencesworkshopssymposiumshorttermcoursesorganized" placeholder="Enter your  conferencesworkshopssymposiumshorttermcoursesorganized.."required>
+        <label for="ongoingprojects">OngoingProjects:</label>
+		<input type="text" id="past" name="ongoingprojects" placeholder="Enter your ongoingprojects..">
+		<label for="projectscompleted">ProjectsCompleted:</label>
+		<input type="text" id="present" name="projectscompleted" placeholder="Enter your  projectscompleted:.."required>
+        <label for="expertlectures">expertlectures:</label>
+		<input type="text" id="past" name="expertlectures" placeholder="Enter your expertlectures..">
+		<input type="submit" value="Submit">
+        <button type="button"><a href="">View</a></button>
+	</form>
+</div>
+</div>
+

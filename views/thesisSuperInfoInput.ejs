@@ -1,0 +1,61 @@
+<style>
+    .basicInfoarea
+    {
+        box-sizing: border-box;
+        padding-top: 90px;
+    }
+		form {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+		}
+		input[type=text], select {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+			font-size: 16px;
+            color:black;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		label {
+			font-size: 16px;
+			color:black;
+			font-weight: bold;
+		}
+	</style>
+
+<div class="basicInfoPage">
+  <div class="basicInfoarea">
+	<form action="/thesisSuper/create"method=POST>
+		<label for="researchtopic">Researchtopic:</label>
+		<input type="text" id="present" name="researchtopic" placeholder="Enter your  researchtopic.."required>
+        <label for="nameofStudent">Name of Student:</label>
+		<input type="text" id="past" name="nameofStudent" placeholder="Enter your nameofStudent..">
+        <label for="completionRegistrationYear">Completion / Registration Year:</label>
+		<input type="text" id="past" name="completionRegistrationYear" placeholder="Enter your nameofStudent..">
+		<input type="submit" value="Submit">
+        <!-- <button type="button"><a href="">View</a></button> -->
+	</form>
+</div>
+</div>
+

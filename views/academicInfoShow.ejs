@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/basicshow.css">
+<div class="basicInfoShow">
+    <div class="basicinfodashboard">
+    <%- include('detailsDashboard');%>
+</div>
+<div class="basicInfo">
+    <div class="facultydetails">
+
+        <!-- <img src="<%=useremail.avatar%>" alt="aaaa" srcset=""width="100"> -->
+     
+        </div>
+   
+   <div class="basicinfodata">
+
+   <% for(userD of userD){%>
+          
+         
+          <% if(userD.facultycard==currentemail){%>
+
+          
+            <ul>
+                <li><h3> Keynote Address /Invited Talks in Conferences & Workshops</h3><hr><%=userD. keynoteaddressinvitedtalksinconferencesworkshops%></li>
+                <li><h3>Award and Honors</h3><hr><%=userD.awardandhonors%></li>
+                <li><h3>Award and Honors</h3><hr><%=userD.awardandhonors%></li>
+                <li><h3>Conferences/ Workshops/Symposium/ Short-term Courses Organized:</h3><hr><%=userD. conferencesworkshopssymposiumshorttermcoursesorganized%></li>
+                <li><h3>On-going Projects:</h3><hr><%=userD.ongoingprojects%></li>
+                <li><h3>Projects Completed:</h3><hr><%=userD.projectscompleted%></li>
+                
+                
+               
+            
+            <%if(locals.user && locals.user.role==='faculty')  {%>        
+                <a href="/academicInfo/destroy/<%= userD.id %>"class="button1">Delete post</a>
+                  <%}%>
+                 
+            </ul>
+           <%}%>
+            
+    <%}%>
+
+</div>
+
+</div>
+</div>

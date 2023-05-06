@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="/css/addfaculty.css">
+ <link rel="stylesheet" href="/css/addfaculty.css">
 
-<div class="addfacultycontainer">
+<!--<div class="addfacultycontainer">
     
         <h1 class="addfacultyheading">
             Add your Faculties
@@ -9,7 +9,7 @@
     
     <div class="addfacultyform">
     
-    <form action="/facultycard/create" id="new-facultycard-form"          method="POST"id="addfaculty"class="addfacultygroup">
+    <form action="/facultycard/create" id="new-facultycard-form"          method="POST"id="addfaculty"class="addfacultygroup" enctype="multipart/form-data">
               <label for="name" class="facultylable">Name:</label><br>
               <input type="text" name="name" id="designation" required><br>
              <label for="designation" class="facultylable">Designation:</label><br>
@@ -24,7 +24,59 @@
              <input type="email" name="email" id="designation" required><br>
              <label for="facultyId" class="facultylable">FacultyID:</label><br>
              <input type="password" name="facultyId" id="designation" required><br>
+             <label for="avatar"class="facultylable">ProfilePic:</label><br>
+             <input type="file" name="avatar" id="avatar"><br>
              <input type="submit" value="+Add Faculty"id="addfacultyButton">
  </form>
+
     </div>
+        
+</div> -->
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="addfacultycontainer">
+  <h1 class="addfacultyheading">
+    Add your Faculties
+  </h1>
+  <div class="addfacultyform">
+    <form action="/facultycard/create" id="new-facultycard-form" method="POST" id="addfaculty" class="addfacultygroup" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name" class="facultylable"><i class="far fa-user"></i> Name:</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="designation" class="facultylable"><i class="fas fa-briefcase"></i> Designation:</label>
+        <input type="text" name="designation" id="designation" required>
+      </div>
+      <div class="form-group">
+        <label for="qualification" class="facultylable"><i class="fas fa-graduation-cap"></i> Qualification:</label>
+        <input type="text" name="qualification" id="qualification" required>
+      </div>
+      <div class="form-group">
+        <label for="areaOfInterest" class="facultylable"><i class="fas fa-heart"></i> Area of Interest:</label>
+        <input type="text" name="areaOfInterest" id="areaOfInterest" required>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="facultylable"><i class="fas fa-phone"></i> Phone No:</label>
+        <input type="text" name="phone" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="facultylable"><i class="far fa-envelope"></i> Email:</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="facultyId" class="facultylable"><i class="fas fa-lock"></i> Faculty ID:</label>
+        <input type="password" name="facultyId" id="facultyId" required>
+      </div>
+      <div class="form-group">
+        <label for="avatar" class="facultylable"><i class="far fa-image"></i> Profile Pic:</label>
+        <input type="file" name="avatar" id="avatar">
+      </div>
+      <input type="submit" value="+ Add Faculty" id="addfacultyButton">
+    </form>
+  </div>
 </div>
+

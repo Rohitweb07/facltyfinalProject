@@ -1,0 +1,55 @@
+<style>
+
+    .basicInfoShow
+    {
+        display: flex;
+        flex-direction: row;
+    }
+    .basicInfo{
+        padding-top: 100px;
+    }
+    th ,td{
+        color: black;
+
+    }
+</style>
+<div class="basicInfoShow">
+    <%- include('detailsDashboard');%>
+   
+<div class="basicInfo">
+  
+
+
+   <% for(userD of userD){%>
+          
+         
+          <% if(userD.facultycard==currentemail){%>
+
+            <table border="1">
+
+                <tr><th>Research Topic</th>
+                <td><%=userD.researchtopic%></td>
+                </tr>
+                <tr><th>Name of Student</th>
+                    <td><%=userD.nameofStudent%></td>
+                    </tr>
+                    <tr><th>Completion/Registration Year</th>
+                        <td><%=userD.completionRegistrationYear%></td>
+                        </tr>
+                
+            </table>
+              <%if(locals.user && locals.user.role==='faculty' && locals.user.email==currentemail)  {%>        
+                <a href="/thesisSuper/destroy/<%= userD.id %>"class="button1">Delete post</a>
+                <a href="/thesisSuper/edits/<%= locals.user.email %>"class="button1">Edit post</a>
+                  <%}%>
+            
+          
+                 
+            
+           <%}%>
+            
+    <%}%>
+
+</div>
+
+</div>

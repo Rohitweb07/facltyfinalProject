@@ -15,19 +15,25 @@ module.exports.create=async function(req,res)
     if (!req.user) {
         throw new Error('User not authenticated');
       } 
+
+      Facultycard.uploadedAvatar(req,res,function(err){
+        if(err){console.log(`*********multerError********${err}`)}
   
-      await Facultycard.create({
+        Facultycard.create({
         name:req.body.name,
         designation:req.body.designation,
         qualification:req.body.qualification,
         areaOfInterest:req.body.areaOfInterest,
         phone:req.body.phone,
         email:req.body.email,
+        avatar: Facultycard.avatarPath +'/'+ req.file.filename,
         facultyId:req.body.facultyId,
-        faculty: req.user?.id
+        faculty: req.user?.id,
       });
+      return res.redirect('/');
+    });
   
-      return res.redirect('back');
+      
     } catch (err) {
       console.log('Error creating post:', err);
       return res.redirect('back');

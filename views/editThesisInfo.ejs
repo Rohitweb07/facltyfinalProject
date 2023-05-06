@@ -1,0 +1,159 @@
+<!-- <style>
+
+.editthesis{
+    padding-top: 500px;
+}
+
+</style>
+
+<div class="editthesiscontainer">
+
+
+
+    <div class="editthesis">
+<%for(userD of userD){%>
+     <%if(userD.facultycard==currentemail){%>
+
+     
+    <h1 style="color:brown"><%=userD.id%></h1>
+     <form action="/thesisSuper/updates/<%=userD.id%>"method="POST">   
+    <label for="researchtopic">Researchtopic:</label>
+    <input type="text" id="present" name="researchtopic" placeholder="Enter your  researchtopic.."value="<%=userD.researchtopic%>"required>
+    <label for="nameofStudent">Name of Student:</label>
+    <input type="text" id="past" name="nameofStudent" placeholder="Enter your nameofStudent.."value="<%=userD.nameofStudent%>">
+    <label for="completionRegistrationYear">Completion / Registration Year:</label>
+    <input type="text" id="past" name="completionRegistrationYear" placeholder="Enter your nameofStudent.."value="<%=userD.completionRegistrationYear%>">
+    <input type="submit" value="Submit">
+    <button type="button"><a href="">View</a></button>
+  
+</form>
+<%}%>
+<%}%>
+</div>
+</div> -->
+
+<style>
+.editthesis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.editthesis-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  padding: 20px;
+  margin-top: 100px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.editthesis-title {
+  color: brown;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color:#a52a2a;
+}
+
+.input-group {
+  position: relative;
+}
+
+input[type="text"],
+input[type="textbox"],
+textarea {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color:#000000;
+  font-weight: bold;
+}
+
+.icon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #ccc;
+  
+}
+
+.fa {
+  font-size: 18px;
+}
+
+.submit-btn {
+  background-color: brown;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #a52a2a;
+}
+i{
+    color: #000000;
+}
+
+
+</style>
+
+<div class="editthesis-container">
+   <h1 style="color: #a52a2a;margin-top: 100px;"><%=currentemail%></h1><br>
+   <h1 style="color: #a52a2a;margin-top: 100px;"><%=locals.user.email%></h1>
+  
+      <% if (locals.user.email == currentemail) { %>
+        <div class="editthesis-card">
+          <h1 class="editthesis-title">hiii<%= userD.facultycard %></h1>
+          <form action="/thesisSuper/updates/<%= userD.id %>" method="POST">
+            <div class="form-group">
+              <label for="researchtopic">Research Topic:</label>
+              <div class="input-group">
+                <textarea id="text" cols="30"row="4"id="present" name="researchtopic" placeholder="Enter your research topic.."  required><%= userD.researchtopic %></textarea>
+                <span class="icon"><i class="fa fa-pencil"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nameofStudent">Name of Student:</label>
+              <div class="input-group">
+                <input type="text" id="past" name="nameofStudent" placeholder="Enter your name of student.." value="<%= userD.nameofStudent %>">
+                <span class="icon"><i class="fa fa-user"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="completionRegistrationYear">Completion / Registration Year:</label>
+              <div class="input-group">
+                <input type="text" id="past" name="completionRegistrationYear" placeholder="Enter completion / registration year.." value="<%= userD.completionRegistrationYear %>">
+                <span class="icon"><i class="fa fa-calendar"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="submit-btn">update</button>
+              
+            </div>
+          </form>
+        </div>
+      <% } %>
+    
+   
+  </div>
+  
